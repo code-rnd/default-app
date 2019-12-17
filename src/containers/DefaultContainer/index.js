@@ -3,7 +3,7 @@ import DefaultComponent from "../../components/DefaultComponent";
 import {changeText} from '../../store/actions'
 
 const mapStateToProps = state => ({
-    state: state
+    currentText: state.content.text
 })
 
 const mapDispatchToProps = dispatch => ({
