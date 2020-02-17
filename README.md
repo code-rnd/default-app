@@ -1,5 +1,5 @@
 # default-app
-default-app: cra + redux (base config)
+default-app: cra + redux + thunk (my base config)
 
 # Развернуть фронт локально
 <ul>
