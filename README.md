@@ -19,3 +19,6 @@ default-app: cra + redux + thunk + axios(testing swApi) (my base config)
   <li><code>npm run build</code></li>
   <li>Каталог билда, лежит в корне проекта (./build/)</li>
  </ul>
+ 
+ # Демо проекта
+ https://code-rnd.github.io/default-app
