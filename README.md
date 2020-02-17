@@ -1,5 +1,5 @@
 # default-app
-default-app: cra + redux + thunk (my base config)
+default-app: cra + redux + thunk + axios (my base config)
 
 База, для более быстрого старта разработки <br>
 Настроен Redux <br>
