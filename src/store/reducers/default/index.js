@@ -14,7 +14,7 @@ const initialContent = [
 ];
 
 export const initialState = {
-  content: [...initialContent]
+  default: [...initialContent]
 };
 
 export function defaultReducers(state = initialState, action) {
