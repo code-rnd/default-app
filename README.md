@@ -1,6 +1,10 @@
 # default-app
 default-app: cra + redux + thunk (my base config)
 
+База, для более быстрого старта разработки <br>
+Настроен Redux <br>
+Дефолтный сборщик из коробки CRA <br>
+
 # Развернуть фронт локально
 <ul>
   <li>Склонируйте ветку <code>dev</code></li>
@@ -15,8 +19,3 @@ default-app: cra + redux + thunk (my base config)
   <li><code>npm run build</code></li>
   <li>Каталог билда, лежит в корне проекта (./build/)</li>
  </ul>
- 
- # Реализовано
- База, для более быстрого старта разработки <br>
- Настроен Redux <br>
- Дефолтный сборщик из коробки CRA <br>
