@@ -1,6 +1,8 @@
-import {combineReducers} from 'redux'
-import {defaultReducers} from "./DefaultAppReducers";
+import { combineReducers } from "redux";
+import { defaultReducers } from "./default";
+import { counterReducers } from "./counter";
 
 export const reducers = combineReducers({
-    'content': defaultReducers
-})
+  content: defaultReducers,
+  counter: counterReducers
+});
