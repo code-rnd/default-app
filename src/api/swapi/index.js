@@ -5,18 +5,8 @@ export const instance = axios.create({
 });
 
 export const swApi = {
-  getPeople(peopleId) {
-    return instance.get(`people/${peopleId}/`).then(response => {
-      return response.data;
-    });
-  },
-  getPlanets(planetId) {
-    return instance.get(`planets/${planetId}/`).then(response => {
-      return response.data;
-    });
-  },
-  getStarships(starshipId) {
-    return instance.get(`starships/${starshipId}/`).then(response => {
+  getHero(id) {
+    return instance.get(`people/${id}/`).then(response => {
       return response.data;
     });
   }

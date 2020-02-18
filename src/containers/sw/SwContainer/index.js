@@ -1,22 +1,14 @@
 import { connect } from "react-redux";
-import {
-  getPeople,
-  getPlanets,
-  getStarships
-} from "../../../store/actions/sw/async";
+import { getHero } from "../../../store/actions/sw/async";
 import SwComponent from "../../../components/sw/SwComponent";
 
 const mapStateToProps = state => ({
-  people: state.sw.data.people,
-  planets: state.sw.data.planets,
-  starships: state.sw.data.starships,
+  hero: state.sw.data.hero,
   isFetching: state.sw.isFetching
 });
 
 const mapDispatchToProps = {
-  getPeople,
-  getPlanets,
-  getStarships
+  getHero
 };
 
 export const SwContainer = connect(

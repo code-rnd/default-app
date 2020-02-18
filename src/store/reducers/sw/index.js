@@ -1,15 +1,8 @@
-import {
-  SET_PEOPLE,
-  SET_PLANETS,
-  SET_STARSHIPS,
-  TOGGLE_IS_FETCHING
-} from "../../actions/sw";
+import { SET_HERO, TOGGLE_IS_FETCHING } from "../../actions/sw";
 
 export const initialState = {
   data: {
-    people: null,
-    planets: null,
-    starships: null
+    hero: null
   },
   isFetching: false
 };
@@ -17,47 +10,19 @@ export const initialState = {
 export function swReducers(state = initialState, action) {
   const data = state.data;
 
-  let newPeople = null;
-  let newPlanets = null;
-  let newStarships = null;
+  let newHero = null;
   let newIsFetching = null;
 
   switch (action.type) {
-    case SET_PEOPLE:
-      newPeople = action.data;
+    case SET_HERO:
+      newHero = action.data;
 
       return {
         ...state,
         ...{
           data: {
             ...data,
-            people: newPeople
-          }
-        }
-      };
-
-    case SET_PLANETS:
-      newPlanets = action.data;
-
-      return {
-        ...state,
-        ...{
-          data: {
-            ...data,
-            planets: newPlanets
-          }
-        }
-      };
-
-    case SET_STARSHIPS:
-      newStarships = action.data;
-
-      return {
-        ...state,
-        ...{
-          data: {
-            ...data,
-            starships: newStarships
+            hero: newHero
           }
         }
       };

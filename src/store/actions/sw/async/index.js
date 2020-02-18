@@ -1,15 +1,15 @@
-import { toggleIsFetching, setPeople, setPlanets, setStarships } from "..";
+import { toggleIsFetching, setHero, setPlanet, setStarship } from "..";
 import { swApi } from "../../../../api/swapi";
 
-export const getPeople = id => {
+export const getHero = id => {
   return dispatch => {
     dispatch(toggleIsFetching(true));
 
     swApi
-      .getPeople(id)
+      .getHero(id)
       .then(data => {
         dispatch(toggleIsFetching(false));
-        dispatch(setPeople(data.name));
+        dispatch(setHero(data.name));
       })
       .catch(data => {
         dispatch(toggleIsFetching(false));
@@ -17,15 +17,15 @@ export const getPeople = id => {
   };
 };
 
-export const getStarships = id => {
+export const getStarship = id => {
   return dispatch => {
     dispatch(toggleIsFetching(true));
 
     swApi
-      .getStarships(id)
+      .getStarship(id)
       .then(data => {
         dispatch(toggleIsFetching(false));
-        dispatch(setStarships(data.name));
+        dispatch(setStarship(data.name));
       })
       .catch(data => {
         dispatch(toggleIsFetching(false));
@@ -33,15 +33,15 @@ export const getStarships = id => {
   };
 };
 
-export const getPlanets = id => {
+export const getPlanet = id => {
   return dispatch => {
     dispatch(toggleIsFetching(true));
 
     swApi
-      .getPlanets(id)
+      .getPlanet(id)
       .then(data => {
         dispatch(toggleIsFetching(false));
-        dispatch(setPlanets(data.name));
+        dispatch(setPlanet(data.name));
       })
       .catch(data => {
         dispatch(toggleIsFetching(false));

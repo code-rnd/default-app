@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
 export default function SwComponent(props) {
-  const { getPeople, getPlanets, getStarships } = props;
-  const { people, planets, starships } = props;
+  const { getHero } = props;
+  const { hero } = props;
   const { isFetching } = props;
 
   const [isSearchId, setIsSearchId] = useState(1);
@@ -14,9 +14,7 @@ export default function SwComponent(props) {
   const getFormDisplay = () => {
     return (
       <div className={"sw__display"}>
-        <div>{people ? people : "герой не найден"}</div>
-        <div>{planets ? planets : "планета не найдена"}</div>
-        <div>{starships ? starships : "корабль не найден"}</div>
+        <div>герой: {hero ? hero : "не найден"}</div>
       </div>
     );
   };
@@ -37,23 +35,9 @@ export default function SwComponent(props) {
         <div className={"configBtns"}>
           <input
             type={"button"}
-            value={"getPeople"}
+            value={"getHero"}
             onClick={() => {
-              getPeople(isSearchId);
-            }}
-          />
-          <input
-            type={"button"}
-            value={"getPlanets"}
-            onClick={() => {
-              getPlanets(isSearchId);
-            }}
-          />
-          <input
-            type={"button"}
-            value={"getStarships"}
-            onClick={() => {
-              getStarships(isSearchId);
+              getHero(isSearchId);
             }}
           />
         </div>
