@@ -1,5 +1,5 @@
 import React from "react";
-import { CounterContainer } from "../../containers/counter";
+import { CounterContainer } from "../../containers/counter/CounterContainer";
 import { DefaultContainer } from "../../containers/default/DefaultContainer";
 import { SwContainer } from "../../containers/sw/SwContainer";
 
